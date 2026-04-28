@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Env
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / debug
+*.log
+data/scoring_debug.jsonl
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Backup files
+*.bak
+*.bak2
+
+# DSW logs
+data/phase3_generate.log
+data/phase3_judge.log
+
+# Phase 1 raw intermediate (regenerable, large)
+data/raw_samples.jsonl
+
+# Empty test files
+data/failed_prompts_test.jsonl
+
+# Personal debug notes (not for public)
