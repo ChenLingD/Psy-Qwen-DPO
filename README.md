@@ -1,5 +1,6 @@
 # Psy-Qwen-DPO: Aligning a Psychological Counselor LLM via DPO
 
+[![HuggingFace](https://img.shields.io/badge/🤗_HuggingFace-Psy--Qwen--DPO--LoRA-yellow)](https://huggingface.co/ChenLingD/Psy-Qwen-DPO-LoRA)
 [![ModelScope](https://img.shields.io/badge/ModelScope-Psy--Qwen--DPO--LoRA-blue?logo=alibabacloud)](https://modelscope.cn/models/linglcn/Psy-Qwen-DPO-LoRA)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org)
@@ -203,9 +204,12 @@ A parent worrying about reducing their child's after-school classes. Both replie
 
 ## Trained Model
 
-The DPO LoRA adapter is publicly available on **ModelScope Hub**:
+The DPO LoRA adapter is publicly available on both **HuggingFace Hub** and **ModelScope Hub**:
 
-🔗 **[linglcn/Psy-Qwen-DPO-LoRA](https://modelscope.cn/models/linglcn/Psy-Qwen-DPO-LoRA)** — 21 MB adapter weights + model card + training history
+- 🤗 **[ChenLingD/Psy-Qwen-DPO-LoRA](https://huggingface.co/ChenLingD/Psy-Qwen-DPO-LoRA)** (HuggingFace)
+- 🔗 **[linglcn/Psy-Qwen-DPO-LoRA](https://modelscope.cn/models/linglcn/Psy-Qwen-DPO-LoRA)** (ModelScope)
+
+21 MB adapter weights + model card + training history
 
 ```python
 from modelscope import snapshot_download
