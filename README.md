@@ -1,5 +1,10 @@
 # Psy-Qwen-DPO: Aligning a Psychological Counselor LLM via DPO
 
+[![ModelScope](https://img.shields.io/badge/ModelScope-Psy--Qwen--DPO--LoRA-blue?logo=alibabacloud)](https://modelscope.cn/models/linglcn/Psy-Qwen-DPO-LoRA)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org)
+
+
 > Iteratively align a Chinese-language psychological counselor LLM (Qwen3.5-0.8B) using **Direct Preference Optimization** on top of an existing SFT model. End-to-end pipeline: scorer-driven preference data curation → DPO LoRA training → LLM-as-Judge evaluation.
 
 **Result:** **74.9% win rate** vs. SFT baseline on 202 held-out prompts, with **near-zero length bias** (+1.3 chars), evaluated using DeepSeek V4-Flash as judge with 2-way position-bias mitigation.
@@ -193,6 +198,20 @@ The client said *"I can't even protect myself"*. Here, the simpler SFT response 
 A parent worrying about reducing their child's after-school classes. Both replies are reasonable; the judge picks the **second-presented** option both times — a clear demonstration of why 2-way mitigation matters. A single-pass evaluation here would have arbitrarily credited either model.
 
 → See [`outputs/case_studies.md`](outputs/case_studies.md) for full transcripts including all judge reasoning.
+
+---
+
+## Trained Model
+
+The DPO LoRA adapter is publicly available on **ModelScope Hub**:
+
+🔗 **[linglcn/Psy-Qwen-DPO-LoRA](https://modelscope.cn/models/linglcn/Psy-Qwen-DPO-LoRA)** — 21 MB adapter weights + model card + training history
+
+```python
+from modelscope import snapshot_download
+adapter_path = snapshot_download("linglcn/Psy-Qwen-DPO-LoRA")
+# Then load on top of your SFT base — see ModelScope page for full inference example.
+```
 
 ---
 
